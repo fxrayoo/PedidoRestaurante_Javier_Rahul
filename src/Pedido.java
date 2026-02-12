@@ -1,4 +1,4 @@
-//Empezamos creando una clase "Pedido" donde estarán los artículos, precios y estados.  
+//Empezamos creando una clase "Pedido" donde estarán los artículos estados.  
 public class Pedido {
     private static int contador_id = 0;
     private int id;
@@ -39,22 +39,5 @@ public class Pedido {
             this.estado = nuevo_estado;
             System.out.println("Estado actualizado a: " + nuevo_estado);
         }
-    }
-
-//Por último un nuevo método para hacer la suma total de los precios
-    public double calcular_total() {
-        double suma = 0;
-        for (int i = 0; i < total_articulos; i++) {
-            suma += precios[i];
-        }
-        return suma;
-    }
-
-//Mostramos la información final
-    public void mostrar_resumen() {
-        System.out.println("Cliente: " + nombre_cliente);
-        System.out.println("Artículos: " + total_articulos + "/5");
-        System.out.println("Estado: " + estado);
-        System.out.println("PRECIO: " + calcular_total() + "€");
     }
 }
